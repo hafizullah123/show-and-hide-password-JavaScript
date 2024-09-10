@@ -1,0 +1,59 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show and Hide Password with JavaScript</title>
+    <style>
+      body {
+        margin: 0;
+        background: cornflowerblue;
+      }
+      .input {
+        background: white;
+        width: 90%;
+        max-width: 500px;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 30px auto;
+        display: flex;
+        align-items: center;
+      }
+      .input input {
+        padding: 15px 0px;
+        width: 100%;
+        font-size: medium;
+        border: 0px;
+        outline: 0;
+        color: rgb(6, 5, 5);
+      }
+      .input img {
+        width: 35px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input">
+      <input
+        type="password"
+        placeholder="password"
+        class="box"
+        id="passwordInput"
+      />
+      <img src="download.png" id="toggleIcon" />
+    </div>
+
+    <script>
+      let passwordInput = document.getElementById("passwordInput");
+      let toggleIcon = document.getElementById("toggleIcon");
+
+      toggleIcon.onclick = function () {
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+        } else {
+          passwordInput.type = "password";
+        }
+      };
+    </script>
+  </body>
+</html>
